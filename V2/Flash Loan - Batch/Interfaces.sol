@@ -1,8 +1,8 @@
 // SPDX-License-Identifier: agpl-3.0
-pragma solidity 0.6.12;
+pragma solidity >=0.6.12;
 pragma experimental ABIEncoderV2;
 
-import { DataTypes } from "Libraries.sol";
+import { DataTypes } from "https://github.com/silvercondor/code-examples-protocol/blob/main/V2/Flash%20Loan%20-%20Batch/Libraries.sol";
 
 /**
  * @dev Interface of the ERC20 standard as defined in the EIP.
@@ -12,7 +12,10 @@ interface IERC20 {
    * @dev Returns the amount of tokens in existence.
    */
   function totalSupply() external view returns (uint256);
-
+  /**
+  * @dev Returns the token decimals. Original from ERC20 interface
+  */
+  function decimals() external view returns (uint256);
   /**
    * @dev Returns the amount of tokens owned by `account`.
    */
